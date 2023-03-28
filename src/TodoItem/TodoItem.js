@@ -2,7 +2,7 @@ import { memo } from 'react';
 import '../App.css';
 
 const TodoItem = ({ id, title, done = false, chosen = false, deleteTodoItem, updateTodoItem }) => {
-    console.log('RENDER!!!');
+    console.log('RENDER TodoItem');
     const updateDoneProp = () => updateTodoItem({ id, done: !done });
     const updateChosenProp = () => updateTodoItem({ id, chosen: !chosen });
 
