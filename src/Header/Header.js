@@ -15,6 +15,8 @@ const Header = ({ addTodoItem }) => {
     setInput('');
   }, [input, addTodoItem]);
 
+  const updateInput = (e) => setInput(e.target.value);
+
   const ifEnter = (e) => {
     // 13 - charcode of Enter button
     if (e.key === 'Enter' || e.keyCode === 13) {
@@ -26,7 +28,7 @@ const Header = ({ addTodoItem }) => {
     <div className="App-header">
       <input
         type="text"
-        onChange={(e) => setInput(e.target.value)}
+        onChange={updateInput}
         value={input}
         onKeyUp={ifEnter}
       />

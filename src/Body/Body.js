@@ -26,19 +26,17 @@ const Body = ({
         <Button className="BlueButton" title="Todo" onClick={handleClickTodoButton} />
       </div>
 
-      {todoList &&
-        todoList.length &&
-        todoList.map(({ id, title, done, chosen }) => (
-          <TodoItem
-            key={id}
-            id={id}
-            title={title}
-            done={done}
-            chosen={chosen}
-            deleteTodoItem={deleteTodoItem}
-            updateTodoItem={updateTodoItem}
-          />
-        ))}
+      {todoList.map(({ id, title, done, chosen }) => (
+        <TodoItem
+          key={id}
+          id={id}
+          title={title}
+          done={done}
+          chosen={chosen}
+          deleteTodoItem={deleteTodoItem}
+          updateTodoItem={updateTodoItem}
+        />
+      ))}
 
       <div className="App-body">
         <Button className="RedButton" title="Delete done tasks" onClick={deleteDoneTodoLists} />
