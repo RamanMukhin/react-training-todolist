@@ -12,9 +12,10 @@ const Body = ({
     deleteDoneTodoLists,
 }) => {
     console.log('Body Render');
-    const handleClickAllButton = useCallback(() => chooseTodoItems(), []);
-    const handleClickDoneButton = useCallback(() => chooseTodoItems(true, 'done'), []);
-    const handleClickTodoButton = useCallback(() => chooseTodoItems(true, 'todo'), []);
+    const handleClickAllButton = useCallback(() => chooseTodoItems(), [chooseTodoItems]);
+    const handleClickDoneButton = useCallback(() => chooseTodoItems(true, 'done'), [chooseTodoItems]);
+    const handleClickTodoButton = useCallback(() => chooseTodoItems(true, 'todo'), [chooseTodoItems]);
+    
     return (
         <>
             <h1>TodoList</h1>

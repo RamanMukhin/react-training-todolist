@@ -15,7 +15,7 @@ const Header = ({ addTodoItem }) => {
             addTodoItem(input);
             setInput('');
         },
-        [input],
+        [input, addTodoItem],
     );
 
     const ifEnter = (e) => {
